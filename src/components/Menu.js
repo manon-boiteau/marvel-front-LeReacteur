@@ -5,7 +5,7 @@ const Menu = () => {
   return (
     <nav>
       <span>
-        <Link to="/">Personnages</Link>
+        <Link to="/">Characters</Link>
       </span>
       <span>
         <Link to="/comics">Comics</Link>

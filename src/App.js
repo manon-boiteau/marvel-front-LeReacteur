@@ -13,8 +13,8 @@ import Header from "./components/Header";
 
 /* Import Fontawsome */
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-library.add(faSearch);
+import { faSearch, faSpinner } from "@fortawesome/free-solid-svg-icons";
+library.add(faSearch, faSpinner);
 
 function App() {
   return (
