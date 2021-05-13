@@ -1,1 +1,148 @@
-/* Other rules */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+/* Variables */
+
+/* Global rules */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family: "Quicksand", sans-serif;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 90vw;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Header */
+header {
+  padding: 20px;
+  height: 20vh;
+}
+header .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(20vh - 40px);
+}
+header img {
+  width: 150px;
+}
+
+/* Navigation */
+header nav span:not(:last-child) {
+  margin-right: 50px;
+}
+header nav span:hover {
+  border-bottom: 3px solid #ee181e;
+}
+
+/* ----- HOME PAGE ----- */
+main .characters-wrapper,
+main .comics-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Search bar */
+.comics-search-bar,
+.characters-search-bar {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+.comics-search-bar input,
+.characters-search-bar input {
+  width: 50vw;
+  padding: 10px;
+  border: 2px solid #ee181e;
+  border-radius: 5px;
+}
+
+/* ----- HOME PAGE & COMICS PAGE ----- */
+/* Characters - card & Comics - card */
+.characters-card,
+.comics-card {
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  width: calc(100% / 5 - 8px);
+  margin-bottom: 10px;
+  color: black;
+}
+.characters-wrapper .characters-card:not(:nth-child(5n)),
+.comics-wrapper .comics-card:not(:nth-child(5n)) {
+  margin-right: 10px;
+}
+.characters-card-img,
+.comics-card-img {
+  background-color: black;
+}
+
+.characters-card img,
+.comics-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 10px 10px 0 0;
+}
+
+/* ----- CHARACTER (WITH COMICS) PAGE ----- */
+.character-bloc {
+  display: flex;
+  padding-top: 50px;
+}
+.character-bloc-1 {
+  width: 40%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.character-bloc-1 h2 {
+  margin-bottom: 50px;
+}
+.character-bloc-1 img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ee181e;
+  margin-bottom: 50px;
+}
+.character-bloc-1 p {
+  text-align: justify;
+}
+.character-bloc-2 {
+  font-size: 14px;
+  width: 60%;
+}
+.character-bloc-2 img {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  object-position: right;
+  border-radius: 0 8px 8px 0;
+}
+.character-bloc-2-comic {
+  border: 3px solid #ee181e;
+  height: calc(225px + 6px);
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+}
+.character-bloc-2-comic div:first-child {
+  padding: 20px;
+}
+.character-bloc-2 .character-bloc-2-comic:not(:last-child) {
+  margin-bottom: 10px;
+}
