@@ -1,5 +1,5 @@
 // React-router-dom - import
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // Components - import
 import Menu from "./Menu";
@@ -7,14 +7,44 @@ import Menu from "./Menu";
 // Images - import
 import marvelLogo from "../assets/img/marvel-logo.png";
 
-const Header = () => {
+const Header = ({
+  handleSearchName,
+  handleSearchTitle,
+  userToken,
+  setUser,
+}) => {
+  let location = useLocation();
+
   return (
     <header>
-      <div className="wrapper">
-        <Link to="/">
-          <img src={marvelLogo} alt="Marvel logo" />
-        </Link>
-        <Menu />
+      <div>
+        <div className="header-head">
+          <div>
+            <Link to="/">
+              <img src={marvelLogo} alt="Marvel logo" />
+            </Link>
+          </div>
+        </div>
+
+        <Menu userToken={userToken} setUser={setUser} />
+        {/* Differente search bar according to the page */}
+        {location.pathname === "/" ? (
+          <div className="characters-search-bar">
+            <input
+              type="text"
+              placeholder="Archangel"
+              onChange={handleSearchName}
+            />
+          </div>
+        ) : location.pathname === "/comics" ? (
+          <div className="characters-search-bar">
+            <input
+              type="text"
+              placeholder="100th Anniversary Special (2014) #1"
+              onChange={handleSearchTitle}
+            />
+          </div>
+        ) : null}
       </div>
     </header>
   );

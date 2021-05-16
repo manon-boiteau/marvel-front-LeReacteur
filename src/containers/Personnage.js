@@ -1,11 +1,14 @@
-/* Import hooks from React */
+// Import hooks from React
 import { useState, useEffect } from "react";
 
-/* Import react-router-dom */
+// Import react-router-dom
 import { useParams } from "react-router-dom";
 
 // Axios - import
 import axios from "axios";
+
+// Fontawsome - import
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Personnage = () => {
   const [data, setData] = useState();
@@ -30,7 +33,12 @@ const Personnage = () => {
   }, [id]);
 
   return isLoading ? (
-    <span>En cours de chargement...</span>
+    <div className="loading">
+      <span className="spin">
+        <FontAwesomeIcon icon="spinner" spin />
+      </span>
+      <span>En cours de chargement...</span>
+    </div>
   ) : (
     <div className="wrapper character-bloc">
       <div className="character-bloc-1">
@@ -49,7 +57,9 @@ const Personnage = () => {
             <div className="character-bloc-2-comic">
               <div>
                 {elem.title ? <span>{elem.title}</span> : null}
-                {elem.description ? <p>{elem.description}</p> : null}
+                {elem.description ? (
+                  <p className="hidden">{elem.description}</p>
+                ) : null}
               </div>
               {elem.thumbnail ? (
                 <div>

@@ -1,7 +1,7 @@
 // React-router-dom - import
 import { Link } from "react-router-dom";
 
-const Menu = () => {
+const Menu = ({ userToken, setUser }) => {
   return (
     <nav>
       <span>
@@ -10,9 +10,28 @@ const Menu = () => {
       <span>
         <Link to="/comics">Comics</Link>
       </span>
-      <span>
+      {/* <span>
         <Link to="/favourite">Favoris</Link>
-      </span>
+      </span> */}
+      {userToken ? (
+        <button
+          className="btn-red"
+          onClick={() => {
+            setUser(null);
+          }}
+        >
+          SIGN OUT
+        </button>
+      ) : (
+        <>
+          <button>
+            <Link to="/signup">SIGN UP</Link>
+          </button>
+          <button>
+            <Link to="/login">LOGIN</Link>
+          </button>
+        </>
+      )}
     </nav>
   );
 };
