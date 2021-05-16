@@ -26,12 +26,18 @@ const Login = ({ setUser }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // Local backend : "http://localhost:3001/user/login"
+    // Heroku backend : "https://mymarvel-lereacteur.herokuapp.com/user/login"
+
     const fetchData = async () => {
       try {
-        const response = await axios.post("http://localhost:3001/user/login", {
-          email: email,
-          password: password,
-        });
+        const response = await axios.post(
+          "https://mymarvel-lereacteur.herokuapp.com/user/login",
+          {
+            email: email,
+            password: password,
+          }
+        );
         console.log(response);
         if (response.data.token) {
           const token = response.data.token;

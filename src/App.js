@@ -44,14 +44,14 @@ function App() {
   const [searchTitle, setSearchTitle] = useState("");
 
   /* ----- Characters page request ----- */
-  // Local backend : http://localhost:3001/characters
-  // Heroku backend :
+  // Local backend : `http://localhost:3001/characters?skip=${skip}&limit=${limit}&name=${searchName}`
+  // Heroku backend : `https://mymarvel-lereacteur.herokuapp.com/characters?skip=${skip}&limit=${limit}&name=${searchName}`
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/characters?skip=${skip}&limit=${limit}&name=${searchName}`
+          `https://mymarvel-lereacteur.herokuapp.com/characters?skip=${skip}&limit=${limit}&name=${searchName}`
         );
 
         setData(response.data.results);

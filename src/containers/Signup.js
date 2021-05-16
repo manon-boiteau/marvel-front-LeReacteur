@@ -31,17 +31,20 @@ const Signup = ({ setUser }) => {
   };
 
   // Local backend : "http://localhost:3001/user/signup"
-  // Heroku backend :
+  // Heroku backend : "https://mymarvel-lereacteur.herokuapp.com/user/signup"
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const fetchData = async () => {
       try {
-        const response = await axios.post("http://localhost:3001/user/signup", {
-          username: userName,
-          email: email,
-          password: password,
-        });
+        const response = await axios.post(
+          "https://mymarvel-lereacteur.herokuapp.com/user/signup",
+          {
+            username: userName,
+            email: email,
+            password: password,
+          }
+        );
         console.log(response.data);
         if (response.data.token) {
           const token = response.data.token;

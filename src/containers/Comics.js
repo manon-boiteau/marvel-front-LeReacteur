@@ -17,14 +17,14 @@ const Comics = ({ title }) => {
   const [limit, setLimit] = useState(100);
   const [comics, setComics] = useState(0);
 
-  // Local backend : http://localhost:3001/comics
-  // Heroku backend :
+  // Local backend : `http://localhost:3001/comics?limit=${limit}&skip=${skip}&title=${title}`
+  // Heroku backend : `https://mymarvel-lereacteur.herokuapp.com/comics?limit=${limit}&skip=${skip}&title=${title}`
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/comics?limit=${limit}&skip=${skip}&title=${title}`
+          `https://mymarvel-lereacteur.herokuapp.com/comics?limit=${limit}&skip=${skip}&title=${title}`
         );
 
         setData(response.data.results);

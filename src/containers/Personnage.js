@@ -16,13 +16,15 @@ const Personnage = () => {
 
   const { id } = useParams();
 
-  // Local backend : http://localhost:3001/comics
-  // Heroku backend :
+  // Local backend : `http://localhost:3001/comics/${id}`
+  // Heroku backend : `https://mymarvel-lereacteur.herokuapp.com/comics/${id}`
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/comics/${id}`);
+        const response = await axios.get(
+          `https://mymarvel-lereacteur.herokuapp.com/comics/${id}`
+        );
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
