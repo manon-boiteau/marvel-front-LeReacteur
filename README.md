@@ -2,7 +2,8 @@
 
 🗓 May 2021  
 🪄 Fontend part of Marvel school projet (based on Marvel API - comics & characters)  
-👀 Look at the backend repo!
+👀 Look at the backend repo!  
+👉🏻 Check [that](https://mymarvel-lereacteur-2021.netlify.app/)
 
 ## Welcome in my Marvel school project 👩🏿‍🎤🥷🏼🦹🏻‍♀️
 
