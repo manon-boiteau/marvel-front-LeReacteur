@@ -48,7 +48,7 @@ const Login = ({ setUser }) => {
       } catch (error) {
         console.log("error ", error);
         if (error.response.status === 400) {
-          setErrorMessage("⛔️ Email or password are wrong.");
+          setErrorMessage("⛔️ Email or password is wrong.");
         }
       }
     };
