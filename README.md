@@ -1,37 +1,70 @@
-# marvel-front-LeReacteur
+# MARVEL WEB APP 👩🏿‍🎤🥷🏼🦹🏻‍♀️
 
-🗓 May 2021  
-🪄 Fontend part of Marvel school projet (based on Marvel API - comics & characters)  
-👀 Look at the backend repo!  
-👉🏻 Check [that](https://mymarvel-lereacteur-2021.netlify.app/)
+🌤 May 2021  
+⚙️ Backend - check the backend [repo](https://github.com/manon-boiteau/marvel-back-LeReacteur.git)  
+✨ Frontend  
+🔗 Netlify - check [that](https://mymarvel-lereacteur-2021.netlify.app/)
 
-## Welcome in my Marvel school project 👩🏿‍🎤🥷🏼🦹🏻‍♀️
+## 🌈 Overview - Welcome dude
 
-The Marvel Universe is a fictional universe where the stories in most American comic book titles and other media published by Marvel Comics take place. Super-teams such as the Avengers, the X-Men, the Fantastic Four, the Guardians of the Galaxy, the Defenders, the Midnight Sons, and many Marvel superheroes live in this universe, including characters such as Spider-Man, Iron Man, Thor, the Hulk, Ant-Man, the Wasp, Captain America, Wolverine, Captain Marvel, Black Panther, Doctor Strange, Scarlet Witch, Vision, Black Widow, Ghost Rider, Blade, the Silver Surfer, Nova, Daredevil, Iron Fist, the Moon Knight, the Punisher and Deadpool, among numerous others.
+---
 
-### My work?
-
-To code a frontend (and a backend 👉🏻 look at the repo) based on a Marvel API. The layout was up to me 🤗!
-Rules to follow:
-
-- Display Marvel's characters on the home page
-- Display Marvel's comics
-- Display each character with a list of all his comics
-- Create a navigation
-
-- Display a search bar (search by name or title)
-- Pagination
-- Authentification: login and signup
+Marvel web app made at [Le Reacteur](https://www.lereacteur.io/) Bootcamp.  
+5 screens are availables: home page with all the Marvel's characters, comics page, individual character page, signup and login.
 
 ![Marvel home page](src/assets/img/marvel-characters-desktop.png)
 ![Marvel comics page](src/assets/img/marvel-comics-tablette.png)
 ![Vinted character page](src/assets/img/marvel-character-desktop.png)
 ![Marvel signup page](src/assets/img/marvel-signup-desktop.png)
-![Marvel login page](src/assets/img/marvel-login-tablette.png)
+![Marvel login page](src/assets/img/marvel-login-tablette.png)]
 
-## Stacks
+## 👩🏻‍💻 Tasks
 
-JavaScript, React.js
-HTML5, CSS3
+---
+
+✘ Create all the layout (no integration)  
+✘ Display Marvel's characters on the home page  
+✘ Display Marvel's comics  
+✘ Display each character with a list of all his comics  
+✘ Create a navigation  
+✘ Display a search bar (search by name or title)  
+✘ Implement pagination  
+✘ Implement authentification: login and signup  
+✘ Use states  
+✘ Make responsive design
+
+## 📚 Stacks
+
+---
+
+[Javascript](https://www.w3schools.com/js/default.asp)  
+[ReactJS](https://fr.reactjs.org/docs/getting-started.html)  
+[HTML5](https://www.w3schools.com/html/default.asp)  
+[CSS3](https://www.w3schools.com/css/default.asp)  
+[Axios](https://github.com/axios/axios)
+
+## 🗝 Installation and usage
+
+---
+
+Be sure, you have installed all dependencies to run the project.
+
+### 🚙 Running the project
+
+1️. Clone this repository
+
+`git clone https://github.com/manon-boiteau/marvel-front-LeReacteur.git`
+
+`cd marvel-front-LeReacteur`
+
+2️. Install packages
+
+`npm install`  
+or  
+`yarn`
+
+3️. When installation is complete:
+
+`yarn start`
 
 🙏🏻 Thank you @LeReacteur.
