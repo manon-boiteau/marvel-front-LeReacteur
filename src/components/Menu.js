@@ -1,4 +1,3 @@
-// React-router-dom - import
 import { Link } from "react-router-dom";
 
 const Menu = ({ userToken, setUser }) => {
@@ -10,9 +9,6 @@ const Menu = ({ userToken, setUser }) => {
       <span>
         <Link to="/comics">Comics</Link>
       </span>
-      {/* <span>
-        <Link to="/favourite">Favoris</Link>
-      </span> */}
       {userToken ? (
         <button
           className="btn-red"

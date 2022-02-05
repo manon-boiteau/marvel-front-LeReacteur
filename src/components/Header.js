@@ -1,10 +1,5 @@
-// React-router-dom - import
 import { Link, useLocation } from "react-router-dom";
-
-// Components - import
 import Menu from "./Menu";
-
-// Images - import
 import marvelLogo from "../assets/img/marvel-logo.png";
 
 const Header = ({
@@ -27,7 +22,7 @@ const Header = ({
         </div>
 
         <Menu userToken={userToken} setUser={setUser} />
-        {/* Differente search bar according to the page */}
+        {/* Not the same search bar according to the page */}
         {location.pathname === "/" ? (
           <div className="characters-search-bar">
             <input

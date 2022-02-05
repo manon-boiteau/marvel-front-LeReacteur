@@ -1,13 +1,6 @@
-// Hooks from React
 import { useState, useEffect } from "react";
-
-// Axios - import
 import axios from "axios";
-
-// Components - import
 import Pagination from "../components/Pagination";
-
-// FontAwesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Comics = ({ title }) => {
@@ -26,7 +19,6 @@ const Comics = ({ title }) => {
         const response = await axios.get(
           `https://mymarvel-lereacteur.herokuapp.com/comics?limit=${limit}&skip=${skip}&title=${title}`
         );
-
         setData(response.data.results);
         setComics(response.data.count);
         setIsLoading(false);

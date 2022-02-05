@@ -1,7 +1,4 @@
-// React-router-dom - import
 import { Link } from "react-router-dom";
-
-// Components - import
 import Pagination from "../components/Pagination";
 
 const Personnages = ({ data, skip, setSkip, limit }) => {

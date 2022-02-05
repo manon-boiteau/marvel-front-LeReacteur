@@ -1,4 +1,3 @@
-// Images - import
 import notFound from "../assets/img/not-found.jpg";
 
 const NoMatch = () => {

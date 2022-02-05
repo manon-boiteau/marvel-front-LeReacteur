@@ -1,30 +1,17 @@
 import "./App.css";
-
-// React-router-dom - import
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-// Hooks from React
 import { useState, useEffect } from "react";
-
-// Axios - import
 import axios from "axios";
-
-// js-cookie - import
 import Cookies from "js-cookie";
-
-// Containers - import
 import Signup from "./containers/Signup";
 import Login from "./containers/login";
 import Comics from "./containers/Comics";
 import Personnage from "./containers/Personnage";
 import Personnages from "./containers/Personnages";
 import NoMatch from "./containers/NoMatch";
-
-// Components - import
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-// Fontawsome - import
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

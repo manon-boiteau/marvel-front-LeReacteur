@@ -1,10 +1,5 @@
-// Import react-router-dom
 import { Link, useHistory } from "react-router-dom";
-
-// Import hooks from React
 import { useState } from "react";
-
-// Import Axios
 import axios from "axios";
 
 const Login = ({ setUser }) => {
@@ -38,11 +33,9 @@ const Login = ({ setUser }) => {
             password: password,
           }
         );
-        console.log(response);
         if (response.data.token) {
           const token = response.data.token;
           setUser(token);
-
           history.push("/"); // user can enter - redirect to home page
         }
       } catch (error) {

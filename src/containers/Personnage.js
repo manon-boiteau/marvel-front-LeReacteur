@@ -1,13 +1,6 @@
-// Import hooks from React
 import { useState, useEffect } from "react";
-
-// Import react-router-dom
 import { useParams } from "react-router-dom";
-
-// Axios - import
 import axios from "axios";
-
-// Fontawsome - import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Personnage = () => {
