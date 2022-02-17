@@ -3,21 +3,18 @@ import axios from "axios";
 import Pagination from "../components/Pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Comics = ({ title }) => {
+const Comics = ({ title, url }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [skip, setSkip] = useState(0);
   const [limit, setLimit] = useState(100);
   const [comics, setComics] = useState(0);
 
-  // Local backend : `http://localhost:3001/comics?limit=${limit}&skip=${skip}&title=${title}`
-  // Heroku backend : `https://mymarvel-lereacteur.herokuapp.com/comics?limit=${limit}&skip=${skip}&title=${title}`
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://mymarvel-lereacteur.herokuapp.com/comics?limit=${limit}&skip=${skip}&title=${title}`
+          `${url}comics?limit=${limit}&skip=${skip}&title=${title}`
         );
         setData(response.data.results);
         setComics(response.data.count);

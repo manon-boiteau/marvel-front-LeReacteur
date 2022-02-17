@@ -30,6 +30,7 @@ function App() {
   const [searchName, setSearchName] = useState("");
   const [searchTitle, setSearchTitle] = useState("");
 
+  const url = `http://localhost:3001/`;
   /* ----- Characters page request ----- */
   // Local backend : `http://localhost:3001/characters?skip=${skip}&limit=${limit}&name=${searchName}`
   // Heroku backend : `https://mymarvel-lereacteur.herokuapp.com/characters?skip=${skip}&limit=${limit}&name=${searchName}`
@@ -38,7 +39,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://mymarvel-lereacteur.herokuapp.com/characters?skip=${skip}&limit=${limit}&name=${searchName}`
+          `${url}characters?skip=${skip}&limit=${limit}&name=${searchName}`
         );
 
         setData(response.data.results);
@@ -49,7 +50,7 @@ function App() {
       }
     };
     fetchData();
-  }, [skip, limit, searchName]);
+  }, [skip, limit, searchName, url]);
 
   /* Cookies */
   const setUser = (token) => {
@@ -91,16 +92,16 @@ function App() {
       />
       <Switch>
         <Route path="/signup">
-          <Signup setUser={setUser} />
+          <Signup setUser={setUser} url={url} />
         </Route>
         <Route path="/login">
-          <Login setUser={setUser} />
+          <Login setUser={setUser} url={url} />
         </Route>
         <Route path="/comics">
-          <Comics title={searchTitle} />
+          <Comics title={searchTitle} url={url} />
         </Route>
         <Route path="/personnage/:id">
-          <Personnage />
+          <Personnage url={url} />
         </Route>
         <Route exact path="/">
           <Personnages

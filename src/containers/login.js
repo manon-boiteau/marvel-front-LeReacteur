@@ -2,7 +2,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
-const Login = ({ setUser }) => {
+const Login = ({ setUser, url }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -21,18 +21,12 @@ const Login = ({ setUser }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Local backend : "http://localhost:3001/user/login"
-    // Heroku backend : "https://mymarvel-lereacteur.herokuapp.com/user/login"
-
     const fetchData = async () => {
       try {
-        const response = await axios.post(
-          "https://mymarvel-lereacteur.herokuapp.com/user/login",
-          {
-            email: email,
-            password: password,
-          }
-        );
+        const response = await axios.post(`${url}user/login`, {
+          email: email,
+          password: password,
+        });
         if (response.data.token) {
           const token = response.data.token;
           setUser(token);
